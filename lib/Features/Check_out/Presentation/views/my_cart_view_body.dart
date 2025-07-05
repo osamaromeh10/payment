@@ -1,9 +1,11 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:payment_checkout/Features/Check_out/Presentation/views/cart_order_info_item.dart';
+import 'package:payment_checkout/Features/Check_out/Presentation/views/total_price.dart';
+import 'package:payment_checkout/core/utils/app_colors.dart';
 import 'package:payment_checkout/core/utils/app_images.dart';
 import 'package:payment_checkout/core/utils/app_strings.dart';
-import 'package:payment_checkout/core/utils/app_styles.dart';
 
 class MyCartViewBody extends StatelessWidget {
   const MyCartViewBody({super.key});
@@ -34,25 +36,18 @@ class MyCartViewBody extends StatelessWidget {
               title: AppStrings.shiping,
               value: AppStrings.valueThree,
             ),
+            Divider(
+              height: 34, // 17 on the Top and 17 // on the down
+              thickness: 2,
+              color: AppColors.dividerColor,
+            ),
+            TotalPrice(
+              titleLarge: AppStrings.total,
+              value: AppStrings.valueTotal,
+            ),
           ],
         ),
       ),
-    );
-  }
-}
-
-class OrderInfoItem extends StatelessWidget {
-  final String title, value;
-  const OrderInfoItem({super.key, required this.title, required this.value});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(title, style: AppStyles.style18),
-        Spacer(),
-        Text(value, style: AppStyles.style18),
-      ],
     );
   }
 }
