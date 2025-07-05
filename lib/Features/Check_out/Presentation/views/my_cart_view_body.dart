@@ -6,6 +6,7 @@ import 'package:payment_checkout/Features/Check_out/Presentation/views/total_pri
 import 'package:payment_checkout/core/utils/app_colors.dart';
 import 'package:payment_checkout/core/utils/app_images.dart';
 import 'package:payment_checkout/core/utils/app_strings.dart';
+import 'package:payment_checkout/core/widgets/custom_button.dart';
 
 class MyCartViewBody extends StatelessWidget {
   const MyCartViewBody({super.key});
@@ -17,11 +18,13 @@ class MyCartViewBody extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 18),
         child: Column(
           children: [
-            const SizedBox(height: 18),
+            const SizedBox(height: 14),
             Center(
-              child: Image.asset(AppImages.basketProduct, fit: BoxFit.cover),
+              child: Expanded(
+                child: Image.asset(AppImages.basketProduct, fit: BoxFit.cover),
+              ),
             ),
-            SizedBox(height: 25),
+            SizedBox(height: 15),
             OrderInfoItem(
               title: AppStrings.orderSubtotal,
               value: AppStrings.valueOne,
@@ -37,7 +40,7 @@ class MyCartViewBody extends StatelessWidget {
               value: AppStrings.valueThree,
             ),
             Divider(
-              height: 34, // 17 on the Top and 17 // on the down
+              height: 24, // 12 on the Top and 12 // on the down
               thickness: 2,
               color: AppColors.dividerColor,
             ),
@@ -45,6 +48,9 @@ class MyCartViewBody extends StatelessWidget {
               titleLarge: AppStrings.total,
               value: AppStrings.valueTotal,
             ),
+            SizedBox(height: 7),
+            CustomButton(onTap: () {}),
+            SizedBox(height: 2),
           ],
         ),
       ),
