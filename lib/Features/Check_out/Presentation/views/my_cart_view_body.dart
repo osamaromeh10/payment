@@ -1,10 +1,12 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:payment_checkout/Features/Check_out/Presentation/views/cart_order_info_item.dart';
 import 'package:payment_checkout/Features/Check_out/Presentation/views/total_price.dart';
 import 'package:payment_checkout/core/utils/app_colors.dart';
 import 'package:payment_checkout/core/utils/app_images.dart';
+import 'package:payment_checkout/core/utils/app_router.dart';
 import 'package:payment_checkout/core/utils/app_strings.dart';
 import 'package:payment_checkout/core/widgets/custom_button.dart';
 
@@ -49,7 +51,11 @@ class MyCartViewBody extends StatelessWidget {
               value: AppStrings.valueTotal,
             ),
             SizedBox(height: 7),
-            CustomButton(onTap: () {}),
+            CustomButton(
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.paymentDeatils);
+              },
+            ),
             SizedBox(height: 2),
           ],
         ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:payment_checkout/Features/Check_out/Presentation/views/my_cart_view.dart';
+import 'package:payment_checkout/core/utils/app_router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +11,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: MyCartView());
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      routerConfig: AppRouter.router,
+    );
   }
 }

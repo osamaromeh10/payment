@@ -9,15 +9,18 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: sized_box_for_whitespace
-    return Container(
-      height: 55,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: AppColors.buttonColor,
-        borderRadius: BorderRadius.circular(15),
-      ),
-      child: Center(
-        child: Text(AppStrings.completePayment, style: AppStyles.style22),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        height: 55,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: AppColors.buttonColor,
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: Center(
+          child: Text(AppStrings.completePayment, style: AppStyles.style22),
+        ),
       ),
     );
   }
