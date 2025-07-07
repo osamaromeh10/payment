@@ -4,8 +4,9 @@ import 'package:payment_checkout/core/utils/app_strings.dart';
 import 'package:payment_checkout/core/utils/app_styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.onTap});
+  const CustomButton({super.key, required this.onTap, required this.text});
   final void Function()? onTap;
+  final String text;
   @override
   Widget build(BuildContext context) {
     // ignore: sized_box_for_whitespace
@@ -18,9 +19,7 @@ class CustomButton extends StatelessWidget {
           color: AppColors.buttonColor,
           borderRadius: BorderRadius.circular(15),
         ),
-        child: Center(
-          child: Text(AppStrings.completePayment, style: AppStyles.style22),
-        ),
+        child: Center(child: Text(text, style: AppStyles.style22)),
       ),
     );
   }

@@ -52,6 +52,7 @@ class MyCartViewBody extends StatelessWidget {
             ),
             SizedBox(height: 7),
             CustomButton(
+              text: AppStrings.completePayment,
               onTap: () {
                 GoRouter.of(context).push(AppRouter.paymentDeatils);
               },
