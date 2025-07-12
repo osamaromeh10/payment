@@ -12,4 +12,15 @@ abstract class AppStrings {
   static const completePayment = "Complete Payment";
   static const paymentDetails = "Payment Details";
   static const pay = "Pay";
+  static const creditCard = 'Credit Card\n';
+  static const masterNumber = 'Mastercard **78';
+  static const paid = "PAID";
+  static const thankYou = "Thank You!";
+  static const messageSuccess = "Your transaction was successful";
+  static const date = "Date";
+  static const dateValue = "01/24/2023";
+  static const time = "Time";
+  static const timeValue = "10:15 AM";
+  static const to = "To";
+  static const samLouis = "Sam Louis";
 }
