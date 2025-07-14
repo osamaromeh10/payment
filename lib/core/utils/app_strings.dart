@@ -23,4 +23,5 @@ abstract class AppStrings {
   static const timeValue = "10:15 AM";
   static const to = "To";
   static const samLouis = "Sam Louis";
+  static const continueText = "Continue";
 }
