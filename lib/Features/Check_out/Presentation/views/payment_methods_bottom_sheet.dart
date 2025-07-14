@@ -11,11 +11,17 @@ class PaymentMethodsBottomSheet extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(16),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           SizedBox(height: 16),
           PaymentMethodsListView(),
           SizedBox(height: 32),
-          CustomButton(onTap: () {}, text: AppStrings.continueText),
+          CustomButton(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            text: AppStrings.continueText,
+          ),
         ],
       ),
     );

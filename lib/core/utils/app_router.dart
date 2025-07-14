@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:payment_checkout/Features/Check_out/Presentation/views/my_cart_view.dart';
 import 'package:payment_checkout/Features/Check_out/Presentation/views/payment_details.dart';
 import 'package:payment_checkout/Features/Check_out/Presentation/views/thank_you/thank_you_view.dart';
 
@@ -12,7 +13,7 @@ abstract class AppRouter {
       // First screen route
       GoRoute(
         path: AppRouter.myCartView,
-        builder: (context, state) => ThankYouView(),
+        builder: (context, state) => MyCartView(),
       ),
 
       GoRoute(
